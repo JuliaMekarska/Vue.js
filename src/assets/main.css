@@ -1,0 +1,82 @@
+body {
+    background-image: url('https://img.freepik.com/free-vector/abstract-background-design-with-stars-gray_53876-43534.jpg?w=740&t=st=1708283859~exp=1708284459~hmac=85389f308bd9f4bf648ac8a3475a54d6b25bf8392979e68c9679990becab2328');
+    color: #461f6f;
+}
+.container{
+    font-family: "Rubik", sans-serif;
+    width: 90%;
+    max-width: 960px;
+    margin: 80px auto;
+    border-radius: 20px;
+    box-shadow: 2px 4px 6px rgb(28, 6, 49, 0.1);
+    background: white;
+}
+.error{
+    color: #ff3f80;
+    font-size: 14px;
+}
+
+button {
+    font-family: "Rubik", sans-serif;
+}
+
+.glow-on-hover {
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #c9b5e1;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff00e1, #b700ff, #8000ff, #3700ff, #00d5ff, #3700ff, #8000ff, #b700ff, #ff00e1);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+}
+
+.glow-on-hover:active {
+    color: #c9b5e1
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    background: #9379b5;
+    font-family: "Rubik", sans-serif;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
